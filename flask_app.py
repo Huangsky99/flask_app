@@ -1,9 +1,11 @@
 from flask import render_template, flash, redirect
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 from forms import LoginForm
 
 app = Flask(__name__)
 app.config.from_object("config")
+db = SQLAlchemy(app)
 
 
 @app.route('/')
